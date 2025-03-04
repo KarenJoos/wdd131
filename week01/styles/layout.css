@@ -1,0 +1,132 @@
+/* CSS HEX https://coolors.co/984447-0a2342-bebbbb-ffe347-a663cc
+--platinum: #eaeaeaff;
+--periwinkle: #cbc5eaff;
+--pomp-and-power: #73628aff;
+--delft-blue: #313d5aff;
+--gunmetal: #183642ff; */
+
+:root {
+    --font-family: "Playfair-Display";
+    --h1-background-color: #cbc5eaff;
+    --h1-color: #183642ff;
+    --footer-color: #eaeaeaff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 800px;
+}
+
+
+h1 {
+    font-family: var(--font-family);
+    background-color: var(--h1-background-color);
+    color: var(--h1-color);
+    padding: 20px;
+    text-align: center;
+}
+
+
+h2 {
+    font-family: var(--font-family);
+    background-color: var(--h1-background-color);
+    color: var(--h1-color);
+    padding: 20px;
+    border-radius: 20px 20px 0px 0px;
+    text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+header nav {
+    background-color: #183642ff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration: none;
+}
+
+header nav a {
+    color: var(--footer-color);
+}
+
+nav :hover {
+    text-decoration: overline;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.parent-white {
+    height: auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2fr, 1fr);
+    margin: 20px;
+}
+
+.card-1 p {
+    padding: 10px;
+}
+
+img {
+    height: 150px;
+    width: 90px;
+    float: left;
+}
+
+.card-1 {
+    grid-column: 1/2;
+}
+
+.card-2 {
+    grid-column: 2/3;
+}
+
+.card-1,
+.card-2 p {
+    padding: 10px;
+}
+
+.card-1,
+.card-2 {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    border: .5px solid #183642ff;
+    border-radius: 20px;
+}
+
+img {
+    width: 150px;
+    height: auto;
+    float: right;
+}
+
+section nav {
+    color: var(--h1-color);
+}
+
+li a {
+    display: block
+}
+
+
+footer {
+    background-color: #183642ff;
+    color: var(--footer-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    text-decoration: none;
+}
