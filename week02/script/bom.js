@@ -14,15 +14,16 @@ li.append(deleteButton);
 
 list.append(li)
 
-button.addEventListener('click', function () {
+addbutton.addEventListener('click', function () {
+    
     if (input.value.trim() !== '') { }
         const li = document.createElement('li');
 
-        const deleteButton = document.createElement('button');
-
         li.textContent = input.value;
         input.value = '';
-
+        
+    
+        const deleteButton = document.createElement('button');
         deleteButton.textContent = "❌";
     
         deleteButton.addEventListener('click', function () {
