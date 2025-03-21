@@ -43,7 +43,6 @@ h1 {
 
 h3 {
     font-family: var(--font-family);
-    /* background-color: var(--h1-background-color); */
     color: var(--h1-color);
     padding: 10px;
     text-align: center;
@@ -79,12 +78,10 @@ main {
 
 .parent-white {
     height: auto;
-    /* margin: 20px;  */
-    width: 150%; /*whatever size you want your container*/
-    /* border: 3px solid teal; Used to see where it is */
-    display: flex; /*Make sure to call this on your container*/
-    align-items: stretch; /*stretches all cards same height*/
-    justify-content: space-around; /*some space between cards*/
+    width: 150%; 
+    display: flex; 
+    align-items: stretch; 
+    justify-content: space-around;
 } 
 
 .float-right {
@@ -106,14 +103,12 @@ main {
 .card-2 {
     grid-column: 3/4;
     margin: 20px;
-    /* flex: 0 0 100% */
 }
 
 .card-1,
 .card-2 {
     display: table-cell; 
     flex-direction: column; 
-    /* align-content: center; */
     border: .5px solid #183642ff;
     border-radius: 20px;
     margin: 20px;
@@ -154,9 +149,7 @@ footer {
     background-color: #183642ff;
     color: var(--footer-color);
     display: flex;
-    /* flex-direction:column;  */
     justify-content:center;
     align-items: center;
-    padding: 0px;
     text-decoration: none;
 }
