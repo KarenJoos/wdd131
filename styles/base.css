@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* max-width: 800px; */
+    max-width: 800px;
 }
 
 
@@ -35,6 +35,14 @@ h2 {
     color: var(--h1-color);
     padding: 20px;
     border-radius: 20px 20px 0px 0px;
+    text-align: center;
+}
+
+h3 {
+    font-family: var(--font-family);
+    /* background-color: var(--h1-background-color); */
+    color: var(--h1-color);
+    padding: 10px;
     text-align: center;
 }
 
@@ -63,22 +71,26 @@ main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     align-items: center;
-    justify-content: space-around;
+    /* grid-template-rows: 1fr 1fr; */
 }
 
 .parent-white {
     height: auto;
-    display: grid;
-    grid-gap: 1rem;
-    grid-template-columns: repeat(2fr);
     margin: 20px;
+    width: 100%;
 }
 
-/* img{
+.float-right {
+    float: right;
+    width: auto;
     height: 150px;
-    width: 90px;
+}
+
+.float-left {
     float: left;
-} */
+    width: 150px;
+    height: auto;
+}
 
 .card-1 {
     grid-column: 1/2;
@@ -86,32 +98,46 @@ main {
 
 .card-2 {
     grid-column: 3/4;
-
+    margin: 20px;
+    /* flex: 0 0 100% */
 }
 
-
+.col-container {
+  display: table;
+  width: 100%;
+}
 .card-1,
 .card-2 {
-    display: flex;
+    display: table-cell;
     flex-direction: column;
     align-content: center;
     border: .5px solid #183642ff;
     border-radius: 20px;
-    padding: 10px;
+    /* padding: 10px; */
+    
 }
 
 img {
-    width: 150px;
-    height: auto;
-    float: right;
+    margin: 10px;
 }
 
 section nav {
     color: var(--h1-color);
 }
 
-li a {
-    display: block
+.web a {
+    display:grid
+}
+
+p {
+    display: table;
+    vertical-align: middle;
+    padding: 20px 10px;
+}
+
+figcaption {
+    font-style: italic;
+    padding: 0px 20px
 }
 
 
