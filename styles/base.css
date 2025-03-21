@@ -67,7 +67,8 @@ header nav a {
 }
 
 :hover {
-    text-decoration:solid;
+    text-decoration: solid;
+    color: #cbc5eaff;
 }
 
 main {
