@@ -63,7 +63,7 @@ header nav a {
     color: var(--footer-color);
 }
 
-nav :hover {
+nav:hover {
     text-decoration: overline;
 }
 
