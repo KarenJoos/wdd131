@@ -11,21 +11,74 @@
     padding: 0;
 }
 
-h1 {
-    padding: 1rem;
-    background-color: #071D49;
+h1, footer {
+    padding: 10px;
+    background-color: #AA0200;
     color: #FFF;
+    text-align: center;
+}
+
+h2 {
     text-align: center;
 }
 
 .hero img {
     width: 100%;
     height: auto;
+    border-top: 10px #071D49;
 }
 
-@media screen and (max-width: 550px) {
+main {
+    display: grid;
+    justify-content: center;
+}
+
+@media screen and (min-width: 550px) {
+    h2 {
+        background-color: #FFB81D;
+        color: #fff;
+        padding: 10px;
+        text-align: left;
+    }
+
     main {
         display: grid;
-        grid-template-columns: 1fr;
+        justify-content: center;
     }
+
+    .data h2 { 
+        position: absolute;
+        left: -10px;
+        top: .50rem;
+        padding: 10px 100px;
+        opacity: 80%;
+    }
+
+    .data {
+        position: absolute;
+        background-color: #fff;
+        Left: 2rem;
+        top: 5rem;
+        padding: 4rem 10px 10px 10px;
+        opacity: 75%;
+    }
+
+    .weather {
+        position: absolute;
+        background-color: #fff;
+        Right: 2rem;
+        bottom: 0px;
+        padding: 3.5rem 10px 10px 10px;
+        opacity: 75%;
+        align-content: center;
+    }
+
+    .weather h2 {
+        position: absolute;
+        right: -10px;
+        top: .50rem;
+        padding: 10px 50px;
+        opacity: 80%;
+    }
+
 }
