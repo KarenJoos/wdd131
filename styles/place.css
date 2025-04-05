@@ -1,0 +1,31 @@
+/* Navy Blue #071D49 */
+/* Red #AA0200 */
+/* Yellow #FFB81D */
+
+:root {
+    font-family: Roboto;
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+h1 {
+    padding: 1rem;
+    background-color: #071D49;
+    color: #FFF;
+    text-align: center;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 550px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
