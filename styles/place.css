@@ -2,15 +2,15 @@
 /* Red #AA0200 */
 /* Yellow #FFB81D */
 
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
 :root {
     font-family: Roboto;
     --h2-background-color: #FFB81D;
     --h1-background-color: #AA0200;
-}
-
-* {
-    margin: 0 auto;
-    padding: 0;
 }
 
 h1, footer {
