@@ -4,6 +4,8 @@
 
 :root {
     font-family: Roboto;
+    --h2-background-color: #FFB81D;
+    --h1-background-color: #AA0200;
 }
 
 * {
@@ -13,7 +15,7 @@
 
 h1, footer {
     padding: 10px;
-    background-color: #AA0200;
+    background-color: var(--h1-background-color);
     color: #FFF;
     text-align: center;
 }
@@ -35,7 +37,7 @@ main {
 
 @media screen and (min-width: 550px) {
     h2 {
-        background-color: #FFB81D;
+        background-color: var(--h2-background-color);
         color: #fff;
         padding: 10px;
         text-align: left;
