@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazyload</title>
+    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Karen Joos">
+    <meta name="author" content="Karen Joos">
+    <link rel="stylesheet" href="styles/lazyload.css">
+    <script src="scripts/lazyload.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Lazyload Demostration</h1>
+    </header>
+
+    <main>
+        <picture>
+            <img src="images/flowers.webp" alt="Flowers" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/flowers.webp" alt="Flowers" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/flowers.webp" alt="Flowers" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/flowers.webp" alt="Flowers" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/flowers.webp" alt="Flowers" loading="lazy" width="400" height="600">
+        </picture>
+        <picture>
+            <img src="images/flowers.webp" alt="Flowers" loading="lazy" width="400" height="600">
+        </picture>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌹 Karen Joos 🌹 Utah, USA</p>
+        <p>Last Modification: <span id="lastModified">Last Modification:</span></p>
+    </footer>
+</body>
+</html>
