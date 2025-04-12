@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Karen Joos">
+    <meta name="description" content="Temple Picture Album">
+    <title>Wdd 131 - Temple Picture Album</title>
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/filtered-temples.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@0;1&family=Roboto:ital@0;1&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Temple Album</h1>
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="nav-item"><a href="#" class="nav-link" title="Home">Home</a></li>
+                <li class="nav-item"><a href="#" id="old" class="nav-link" title="Old">Old</a></li>
+                <li class="nav-item"><a href="#" id="new" class="nav-link" title="New">New</a></li>
+                <li class="nav-item"><a href="#" id="large" class="nav-link" title="Large">Large</a></li>
+                <li class="nav-item"><a href="#" id="small" class="nav-link" title="Small">Small</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Home</h2>
+        <div class="res-grid">
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> 🌹 Karen Joos 🌹 Utah, USA</p>
+        <p>Last Modification: <span id="lastModified">Last Modification:</span></p>
+    </footer>
+
+</body>
+
+</html>
