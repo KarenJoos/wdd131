@@ -110,20 +110,55 @@ const largeLink = document.querySelector("#large");
 const smallLink = document.querySelector("#small");
 
 oldLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("1800")))
+    resetTitle("Old");
+
+    const oldTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year < 1900;
+    });
+
+    createTempleCard(oldTemples);
 });
 
 newLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.dedicated.includes("2000")))
+    resetTitle("New");
+
+    const newTemples = temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year < 1900;
+    });
+
+    createTempleCard(newTemples);
 });
 
 largeLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.area.includes(10000)))
+    resetTitle("Large");
+
+    const largeTemples = temples.filter(temple => {
+        const a = parseInt(temple.area.split(",")[0]);
+        return a > 90000;
+    });
+
+    createTempleCard(largeTemples);
 });
 
 smallLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => temple.area.includes(90000)))
+    resetTitle("Small");
+
+    const smallTemples = temples.filter(temple => {
+        const year = parseInt(temple.area.split(",")[0]);
+        return year < 10000;
+    });
+
+    createTempleCard(smallTemples);
 });
+
+function resetTitle(linkName) {
+    document.querySelector(".temple-album").innerHTML = ""; //Clear existing content
+    let title = document.createElement("h2");
+    title.innerHTML = `${linkName}`;
+    document.querySelector(".temple-album").appendChild(title);
+}
 
 function createTempleCard(filteredTemples) {
     document.querySelector(".res-grid").innerHTML = "";
