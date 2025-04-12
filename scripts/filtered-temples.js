@@ -125,9 +125,9 @@ smallLink.addEventListener("click", () => {
     createTempleCard(temples.filter(temple => temple.area.includes(90000)))
 });
 
-function createTempleCard(filteredtemples) {
+function createTempleCard(filteredTemples) {
     document.querySelector(".res-grid").innerHTML = "";
-    filteredtemples.foreach(temple => {
+    filteredTemples.foreach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
