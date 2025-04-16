@@ -90,7 +90,7 @@ const temples = [
         location: "Idaho Falls, Idaho, United States",
         dedicated: "1945, September, 23",
         area: 85624,
-        imageURL:
+        imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/idaho-falls-idaho-temple/idaho-falls-idaho-temple-1903-thumb.jpg"
     },
     {
@@ -98,7 +98,8 @@ const temples = [
         location: "Provo, Utah, United States",
         dedicated: "2016, March, 20",
         area: 85084,
-        imageURL: "https://churchofjesuschristtemples.org/assets/img/temples/provo-city-center-temple/provo-city-center-temple-3391-thumb.jpg"
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/provo-city-center-temple/provo-city-center-temple-3391-thumb.jpg"
     }
 ];
 
@@ -108,6 +109,7 @@ const oldLink = document.querySelector("#old");
 const newLink = document.querySelector("#new");
 const largeLink = document.querySelector("#large");
 const smallLink = document.querySelector("#small");
+const homeLink = document.querySelector("#home");
 
 oldLink.addEventListener("click", () => {
     resetTitle("Old");
@@ -125,7 +127,7 @@ newLink.addEventListener("click", () => {
 
     const newTemples = temples.filter(temple => {
         const year = parseInt(temple.dedicated.split(",")[0]);
-        return year < 1900;
+        return year > 2000;
     });
 
     createTempleCard(newTemples);
@@ -135,7 +137,7 @@ largeLink.addEventListener("click", () => {
     resetTitle("Large");
 
     const largeTemples = temples.filter(temple => {
-        const a = parseInt(temple.area.split(",")[0]);
+        const a = temple.area;
         return a > 90000;
     });
 
@@ -146,44 +148,56 @@ smallLink.addEventListener("click", () => {
     resetTitle("Small");
 
     const smallTemples = temples.filter(temple => {
-        const year = parseInt(temple.area.split(",")[0]);
-        return year < 10000;
+        const a = temple.area;
+        return a < 10000;
+    });
+
+    createTempleCard(smallTemples);
+});
+
+homeLink.addEventListener("click", () => {
+    resetTitle("Home");
+
+    const smallTemples = temples.filter(temple => {
+        const a = temple.area;
+        return a > 1;
     });
 
     createTempleCard(smallTemples);
 });
 
 function resetTitle(linkName) {
-    document.querySelector(".temple-album").innerHTML = ""; //Clear existing content
+    document.querySelector("h2").innerHTML = ""; //Clear existing content
     let title = document.createElement("h2");
     title.innerHTML = `${linkName}`;
-    document.querySelector(".temple-album").appendChild(title);
+    document.querySelector("h2").innerHTML = title.innerHTML;
 }
 
 function createTempleCard(filteredTemples) {
     document.querySelector(".res-grid").innerHTML = "";
-    filteredTemples.foreach(temple => {
+
+    filteredTemples.forEach(temple => {
         let card = document.createElement("section");
         let name = document.createElement("h3");
         let location = document.createElement("p");
         let dedication = document.createElement("p");
         let area = document.createElement("p");
         let img = document.createElement("img");
-        
+
         name.textContent = temple.templeName;
-        location.innerHTML = '<span class="label">Location:</span> ${temple.location}';
-        dedication.innerHTML = '<span class="label">Dedicated:</span> ${temple.dedicated}';
-        area.innerHTML = '<span class="label">Size:</span> ${temple.area} sq ft';
+        location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
+        dedication.innerHTML = `<span class="label">Dedicated:</span> ${temple.dedicated}`;
+        area.innerHTML = `<span class="label">Size:</span> ${temple.area} sq ft`;
         img.setAttribute("src", temple.imageUrl);
-        img.setAttribute("alt", '${temple.templeName} Temple');
+        img.setAttribute("alt", `${temple.templeName} Temple`);
         img.setAttribute("loading", "lazy");
 
         card.appendChild(name);
-        card.appendChild(locattion);
+        card.appendChild(location);
         card.appendChild(dedication);
         card.appendChild(area);
         card.appendChild(img);
-    });
 
-    document.querySelector(".res-grid").appendChild(card);
+        document.querySelector(".res-grid").appendChild(card);
+    });
 }

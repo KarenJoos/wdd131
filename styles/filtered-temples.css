@@ -9,6 +9,10 @@ body {
     box-sizing: border-box;
 }
 
+p {
+    font-size: 15px;
+}
+
 :root {
     margin: 0 auto;
 }
@@ -31,6 +35,12 @@ header {
     font-family: "Roboto", sans-serif;
 }
 
+h3 {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
 h2 {
     display: flex;
     justify-content: center;
@@ -48,9 +58,21 @@ main {
     margin: 0 auto;
 }
 
+
+section {
+    margin: 1rem auto;
+    max-width: 960px;
+    padding: .5rem;
+    background-color: #eee;
+    border: 1px #c5bbbb;
+    border-style: solid;
+}
+
 .res-grid {
     grid-template-columns: 1fr;
     padding: 1rem;
+    text-align: center;
+    border-image: 3px;
 }
 
 #menu::before {
@@ -64,6 +86,16 @@ main {
 li {
     list-style: none;
     color: #000;
+}
+
+img {
+    width: 95%;
+    height: auto;
+    margin: .5rem;
+    box-shadow: 0px 0px 3px 3px #aca7a7;
+    align-self: center;
+    padding: 1px;
+    border-radius: 5px;
 }
 
 .navigation {
