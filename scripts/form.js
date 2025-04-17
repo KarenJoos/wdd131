@@ -19,7 +19,7 @@ if (numReviews !== 0) {
 
 numReviews++;
 
-localStorage.setItem("numReviews-ls, numReviews");
+//localStorage.setItem("numReviews-ls, numReviews");
 
 const products = [
     {
@@ -48,3 +48,23 @@ const products = [
         averagerating: 5.0
     }
 ];
+
+// document.querySelector("#submit").addEventListener("click", () => {
+//     getProducts(products);
+// });
+
+getProduct(products);
+
+function getProduct(filteredProducts) {
+    var sub = document.getElementById("submit");
+    var opt = document.getElementById("option");
+
+    filteredProducts.forEach(product => {
+        var names = product.name;
+        //submit.option.append(names);
+        
+        opt.text = names;
+        sub.appendChild(names);
+    });
+}
+
