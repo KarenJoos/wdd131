@@ -1,0 +1,37 @@
+/* Colors */
+/* #7E78D2 Tropical Indigo, */
+/* #000 Black, */
+/* #BDEDE0 Celeste */
+
+* {
+    margin: 0 auto;
+}
+
+:root {
+    --font-family: "Roboto";
+
+}
+
+header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+header,
+footer {
+background-color: #BDEDE0;
+}
+
+.nav {
+    display: block;
+}
+
+h2 {
+    text-align: center;
+}
+
+.photo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
