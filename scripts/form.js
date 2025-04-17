@@ -5,6 +5,22 @@ const d = new Date();
 let currentyear = d.getFullYear();
 document.getElementById('currentyear').innerHTML = currentyear;
 
+const reviewsDisplay = document.querySelector(".reviews");
+
+let numReviews = Number(window.localStorage.getItem("numReviews-ls")) || 0;
+
+if (numReviews !== 0) {
+    reviewsDisplay.textContent = numReviews;
+}
+// else {
+//     reviewsDisplay.textContent = WRITE IN localStorage
+// }
+
+
+numReviews++;
+
+localStorage.setItem("numReviews-ls, numReviews");
+
 const products = [
     {
         id: "fc-1888",
