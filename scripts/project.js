@@ -46,7 +46,7 @@ const visions = [
         type: "Spiritual",
         date: "2024, May, 17",
         imageUrl:
-            "https://bookofmormoncentral.org/sites/default/files/pictures/page-images/project-page/come-follow-me-book-of-mormon-2024-christ-nephites-gary-kapp.jpg"
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1dHucL8jscrhvcsZF3PrCMx-I9i1C0RVR5Q&s"
     },
     {
         name: "Outdoors",
@@ -74,9 +74,12 @@ const visions = [
     }
 ];
 
+// const imageUrl = document.getElementById('visions');
+// imageUrl.style.maxWidth = '500px'; // Sets the maximum width to 500 pixels
+
 const spiritualLink = document.querySelector("#spiritual")
 const physicalLink = document.querySelector("#physical")
-//createVisionCard(visions);
+createVisionCard(visions);
 
 function resetTitle(linkName) {
     document.querySelector("h2").innerHTML = ""; //Clear existing content
@@ -119,7 +122,7 @@ spiritualLink.addEventListener("click", () => {
 
     const spirit = visions.filter(vision => {
         const type = vision.type;
-        return name = "Spiritual";
+        return type == "Spiritual";
     });
 
     createVisionCard(spirit);
@@ -129,8 +132,8 @@ physicalLink.addEventListener("click", () => {
     resetTitle("Physical");
 
     const physical = visions.filter(vision => {
-        const name = vision.name;
-        return name = "Physical";
+        const type = vision.type;
+        return type == "Physical";
     });
 
     createVisionCard(physical);
