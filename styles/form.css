@@ -1,0 +1,77 @@
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+:root {
+    margin 0 auto;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header, 
+footer {
+    background-color: black;
+    color: #fff;
+    width: 100%;
+    max-width: 400px;
+    margin: 10px 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+}
+
+.wf1 fieldset {
+    background-color: #CAF7E2;
+    max-width: 400px;
+}
+.wf1 label {
+    display: block;
+    font-size: .9rem;
+}
+
+.wf1 div {
+    padding-top: 1rem;
+    font-size: .9rem;
+}
+
+.wf1 input[type="text"],
+.wf1 input[type="tel"],
+.wf1 input[type="email"],
+.wf1 input[type="url"],
+.wf1 input[type="date"] .wf1 select,
+.wf1 input[type="number"] 
+{
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+    /* appearance: none; */
+}
+
+.wf1 input[type="radio"],
+.wf1 input[type="checkbox"]
+{
+    margin-right: 6px;
+}
+
+.wf1 input[type="submit"]
+{
+    margin-top: .5rem;
+}
+
